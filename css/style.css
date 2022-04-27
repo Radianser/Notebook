@@ -21,6 +21,8 @@ p {
     margin: 0 0 0 50px;
 }
 p.item-text {
+    max-width: 83%;
+    margin-left: 25px;
     padding: 10px;
 }
 ul {
@@ -123,9 +125,14 @@ input.edit-field {
     text-indent: 10px;
 }
 input.checkbox {
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    left: 10px;
     width: 13px;
     height: 13px;
-    margin: 3px 3px 3px 15px;
     cursor: pointer;
 }
 p.checked {
