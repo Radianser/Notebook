@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-do-list</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div id="app">
+		
+		<my-calendar
+			:add-dates="addDates"
+			:define-values="defineValues"
+			:change-date="changeDate">
+		</my-calendar>
+		
+		<to-do-list
+			:days="days"
+			:is-active="isActive"
+			:day-number="dayNumber"
+			:month-number="monthNumber"
+			:year-number="yearNumber"
+			:close-list="closeList">
+		</to-do-list>
+	
+	</div>
+
+<script src="js/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

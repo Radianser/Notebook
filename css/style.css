@@ -1,0 +1,156 @@
+h3, ul, p.item-text, .task input {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+}
+select.date {
+    width: 49%;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+h3 {
+    text-indent: 30px;
+    padding: 5px 0;
+}
+p {
+    display: inline-block;
+    margin: 0 0 0 50px;
+}
+p.item-text {
+    padding: 10px;
+}
+ul {
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #c3c3c3;
+    border-radius: 5px;
+}
+ul.days-names {
+    margin-bottom: 2px;
+    background: #424242;
+}
+li {
+    list-style-type: none;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    user-select: none;
+}
+li.days {cursor: pointer;}
+li.days:hover {
+    background: #e2e2e2;
+}
+li.days.active {
+    background: #f1f1f1;
+}
+li.days-names {
+    font-weight: bold;
+    cursor: default;
+    color: white;
+}
+div.container {
+    width: 400px;
+}
+div.container > p {
+    display: block;
+    margin: 0 0 0 50px;
+}
+div.tasklist {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #c3c3c3;
+    margin: 50px 0 20px 50px;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+input.new-data {
+    width: 98%;
+    margin: 5px 0 0 50px;
+}
+.invisible {
+    display: none;
+}
+.close-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    background: no-repeat center/100% url('../img/close.png');
+    transition: all .3s ease;
+}
+.close-img:hover {
+    background: no-repeat center/100% url('../img/close2.png');
+    transform: rotate(180deg);
+}
+.close-img.task-img {
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.close-img.task-img:hover {
+    background: no-repeat center/100% url('../img/close3.png');
+}
+.close-img.task-img.checked {
+    display: none;
+}
+div.task {
+    position: relative;
+    background: white;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+}
+input.edit-field {
+    width: 100%;
+    height: 38px;
+    border: none;
+    text-indent: 10px;
+}
+input.checkbox {
+    width: 13px;
+    height: 13px;
+    margin: 3px 3px 3px 15px;
+    cursor: pointer;
+}
+p.checked {
+    color: #c3c3c3;
+    text-decoration: line-through;
+}
+
+.list-enter-active, .list-leave-active {
+    transition: all .3s ease;
+}
+.list-enter, .list-leave-to {
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+.element-enter-active {
+    transition: all .3s ease .4s;
+}
+.element-leave-active {
+    transition: all .3s ease;
+}
+.element-enter {
+    transform: translateY(5px);
+    opacity: 0;
+}
+.element-leave-to {
+    opacity: 0;
+}
