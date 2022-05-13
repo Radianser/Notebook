@@ -65,8 +65,6 @@ let Calendar = {
 
 			if (date.startDay == 6 && date.endDay >= 30) {
 				return 42;
-			} else if (date.startDay == 5 && date.endDay == 30) {
-				return 35;
 			} else if (date.startDay == 0 && date.endDay == 28) {
 				return 28;
 			} else {
