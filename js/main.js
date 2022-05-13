@@ -102,8 +102,8 @@ let List = {
 					task: event.target.value,
 					checked: false,
 				});
+				event.target.value = '';
 			}
-			event.target.value = '';
 		},
 		checkTask(item) {
 			item.checked = !item.checked;
