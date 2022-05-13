@@ -160,7 +160,7 @@ let List = {
 					<div class="close-img" @click="closeList"></div>
 					<transition-group name="element" tag="div" class="taskList">
 						<div v-for="(item, key) in days[0][yearNumber][monthNumber][dayNumber]" :class="'task'" :key="item.task + key">
-							<input type="checkbox" class="checkbox" @click="checkTask(item)" :checked="getChecked(item)">
+							<input type="checkbox" class="checkbox" @click="checkTask(item)" :disabled="getChecked(item)" :checked="getChecked(item)">
 							<p :class="getClasses('item-text', item)" @click="editValue(item)">{{ item.task }}</p>
 							<input class="invisible edit-field" @blur="saveValue(key)" @keyup.enter="saveValue(key)">
 							<div class="close-img" :class="getClasses('task-img', item)" @click="closeTask(key)"></div>
