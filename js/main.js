@@ -97,27 +97,22 @@ let List = {
 	props: ['yearNumber', 'monthNumber', 'dayNumber', 'isActive', 'days', 'closeList'],
 	methods: {
 		addTask() {
-			//Проверка на пустую строку
-			if(event.target.value == "") return;
-			this.days[0][this.yearNumber][this.monthNumber][this.dayNumber].push({
-				task: event.target.value,
-				checked: false,
-			});
+			if (event.target.value != "") {
+				this.days[0][this.yearNumber][this.monthNumber][this.dayNumber].push({
+					task: event.target.value,
+					checked: false,
+				});
+			}
 			event.target.value = '';
 		},
 		checkTask(item) {
 			item.checked = !item.checked;
 		},
-		//Упрощено
 		getChecked(item) {
 			return item.checked;
 		},
 		getClasses(name, item) {
-			if (item.checked) {
-				return name + ' checked';
-			} else {
-				return name;
-			}
+			return item.checked ? name + ' checked' : name;
 		},
 		closeTask(key) {
 			this.days[0][this.yearNumber][this.monthNumber][this.dayNumber].splice(key, 1);
