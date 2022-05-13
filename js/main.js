@@ -1,5 +1,5 @@
 let Calendar = {
-	props: ['addDates', 'defineValues', 'changeDate'],
+	props: ['addDates', 'defineValues', 'closeList'],
 	data() {
 		return {
 			week: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -76,10 +76,10 @@ let Calendar = {
 	},
 	template: `
 		<div>
-			<select class="date" v-model="chosenYear" @click="changeDate">
+			<select class="date" v-model="chosenYear" @click="closeList">
 				<option v-for="year in years">{{ year }}</option>
 			</select>
-			<select class="date" v-model="chosenMonth" @click="changeDate">
+			<select class="date" v-model="chosenMonth" @click="closeList">
 				<option v-for="month in months">{{ month }}</option>
 			</select>
 
@@ -231,13 +231,6 @@ let vm = new Vue({
 			for (let day of days) {
 				day.classList.remove('active');
 			}
-		},
-		changeDate() {
-			let days = document.querySelectorAll('.days');
-			for (let day of days) {
-				day.classList.remove('active');
-			}
-			this.isActive = false;
 		}
 	}
 });
