@@ -25,6 +25,9 @@ p.item-text {
     margin-left: 25px;
     padding: 10px;
 }
+p.item-text:hover {
+    cursor: text;
+}
 ul {
     width: 350px;
     display: flex;
@@ -114,7 +117,6 @@ div.task {
     position: relative;
     background: white;
     margin: 10px;
-    cursor: pointer;
     user-select: none;
     border-radius: 5px;
 }
