@@ -147,7 +147,9 @@ let List = {
 			p.classList.remove('invisible');
 			p.classList.add('item-text');
 			
-			this.days[0][this.yearNumber][this.monthNumber][this.dayNumber][key].task = elemValue;
+			if (event.target.value.trim() != "") {
+				this.days[0][this.yearNumber][this.monthNumber][this.dayNumber][key].task = elemValue;
+			}
 		},
 	},
 	template: `
