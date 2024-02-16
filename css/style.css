@@ -110,9 +110,9 @@ input.new-data {
 .close-img.task-img:hover {
     background: no-repeat center/100% url('../img/close3.png');
 }
-.close-img.task-img.checked {
+/*.close-img.task-img.checked {
     display: none;
-}
+}/*
 div.task {
     position: relative;
     background: white;
